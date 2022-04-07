@@ -6,6 +6,21 @@
     border: none;
  }
 
+ #result {
+     height: 150px;
+     width: 300px;
+     background-color: antiquewhite;
+ }
+
+ #main-section {
+     height: 500px;
+     width: 300px;
+     background-color: aqua;
+     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ }
+
  #main-section > div {
      font-size: 1.3rem;
      background-color: red;
@@ -15,5 +30,5 @@
  }
 
  #main-section > p {
-     text-align: center;
+     text-align: 0 auto;
  }
