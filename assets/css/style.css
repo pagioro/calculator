@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     border: none;
+    margin: 0 auto;
  }
 
  #result {
@@ -16,12 +17,12 @@
      height: 500px;
      width: 300px;
      background-color: aqua;
-     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+     display: flex; 
+     justify-content: center;
+     padding-top: 15px;
  }
 
- #main-section > div {
+ #main-section > div > div {
      font-size: 1.3rem;
      background-color: red;
      height: 50px;
