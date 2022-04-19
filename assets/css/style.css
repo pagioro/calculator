@@ -9,25 +9,34 @@
 
  #result {
      height: 150px;
-     width: 300px;
-     background-color: antiquewhite;
+     width: 350px;
+     background-color: #D3DEDC;
  }
 
  #main-section {
      height: 500px;
-     width: 300px;
-     background-color: aqua;
+     width: 350px;
+     background-color: #92A9BD;
      display: flex; 
      justify-content: center;
      padding-top: 15px;
  }
 
  #main-section > div > div {
-     font-size: 1.3rem;
-     background-color: red;
-     height: 50px;
-     width: 50px;
+     font-size: 1.5rem;
+     background-color: #FDF6EC;  /* usar essa cor quando apertar o botao #F3E9DD */
+     height: 70px;
+     width: 70px;
      border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 5px;
+ }
+
+ #main-section > div > div:active {
+    background-color: #F3E9DD;
+    border-radius: 20%;
  }
 
  #main-section > p {
