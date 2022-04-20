@@ -21,12 +21,12 @@
                 <div class="btnAc">
                     <i class="fa-solid fa-calculator"></i>
                 </div>
-                <div  onclick="SetValor(7)">
+                <div id="btnSeven"> <!--onclick="SetValor(7)-->
                     <i class="fa-solid fa-7"></i>
-                </div>
-                <div onclick="SetValor(4)">
+                </div>                
+                <div id="btnFour"> <!--onclick="SetValor(4)-->
                     <i class="fa-solid fa-4"></i>
-                </div>
+                </div>                
                 <div id="btnOne">
                     <i class="fa-solid fa-1"></i>
                 </div>
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div id="columm2">
-                <div class="btnEight">
+                <div class="btnJs">
                     <i class="fa-brands fa-js"></i>
                 </div>
                 <div class="btnEight">
@@ -124,6 +124,19 @@ console.log("sanches1")
         MOSTRALOG();
     }
 
+    let btn0 = document.getElementById("btnZero");
+    btn0.onclick = function(){
+        MOSTRALOG();
+        if (PrimeiraVez == "SIM"){
+            num1 = 0;  
+            PrimeiraVez = "NAO";
+        }
+        else {
+           num2 = 0;
+        }
+        MOSTRALOG();       
+    };
+
     let btn1 = document.getElementById("btnOne");
     btn1.onclick = function(){
         MOSTRALOG();
@@ -134,15 +147,113 @@ console.log("sanches1")
         else {
            num2 = 1;
         }
-        MOSTRALOG();
-       
+        MOSTRALOG();       
     };
 
     let btn2 = document.getElementById("btnTwo");
     btn2.onclick = function(){
-        console.log("btn2");
-        num2 = 2;    
+        MOSTRALOG();
+        if (PrimeiraVez == "SIM"){
+            num1 = 2;  
+            PrimeiraVez = "NAO";
+        }
+        else {
+           num2 = 2;
+        }
+        MOSTRALOG();    
     };
+
+    let btn3 = document.getElementById("btnThree");
+    btn3.onclick = function(){
+        MOSTRALOG();
+        if (PrimeiraVez == "SIM"){
+            num1 = 3;  
+            PrimeiraVez = "NAO";
+        }
+        else {
+           num2 = 3;
+        }
+        MOSTRALOG();       
+    };
+
+    let btn4 = document.getElementById("btnFour");
+    btn4.onclick = function(){
+        MOSTRALOG();
+        if (PrimeiraVez == "SIM"){
+            num1 = 4;  
+            PrimeiraVez = "NAO";
+        }
+        else {
+           num2 = 4;
+        }
+        MOSTRALOG();       
+    };
+
+    let btn5 = document.getElementById("btnFive");
+    btn5.onclick = function(){
+        MOSTRALOG();
+        if (PrimeiraVez == "SIM"){
+            num1 = 5;  
+            PrimeiraVez = "NAO";
+        }
+        else {
+           num2 = 5;
+        }
+        MOSTRALOG();       
+    };
+
+    let btn6 = document.getElementById("btnSix");
+    btn6.onclick = function(){
+        MOSTRALOG();
+        if (PrimeiraVez == "SIM"){
+            num1 = 6;  
+            PrimeiraVez = "NAO";
+        }
+        else {
+           num2 = 6;
+        }
+        MOSTRALOG();       
+    };
+
+    let btn7 = document.getElementById("btnSeven");
+    btn7.onclick = function(){
+        MOSTRALOG();
+        if (PrimeiraVez == "SIM"){
+            num1 = 7;  
+            PrimeiraVez = "NAO";
+        }
+        else {
+           num2 = 7;
+        }
+        MOSTRALOG();       
+    };
+
+    let btn8 = document.getElementById("btnEight");
+    btn8.onclick = function(){
+        MOSTRALOG();
+        if (PrimeiraVez == "SIM"){
+            num1 = 8;  
+            PrimeiraVez = "NAO";
+        }
+        else {
+           num2 = 8;
+        }
+        MOSTRALOG();       
+    };
+
+    let btn9 = document.getElementById("btnNine");
+    btn9.onclick = function(){
+        MOSTRALOG();
+        if (PrimeiraVez == "SIM"){
+            num1 = 9;  
+            PrimeiraVez = "NAO";
+        }
+        else {
+           num2 = 9;
+        }
+        MOSTRALOG();       
+    };
+    
 
     let btnEqual = document.getElementById("btnEqual");
     btnEqual.onclick = function(){
@@ -157,10 +268,6 @@ console.log("sanches1")
         MOSTRALOG();
         document.getElementById("result").innerHTML = "Resultado: " + total;
     };
-
-
-
-
 
     </script>
 </body>
