@@ -21,13 +21,13 @@
                 <div class="btnAc">
                     <i class="fa-solid fa-calculator"></i>
                 </div>
-                <div class="btnSeven">
+                <div  onclick="SetValor(7)">
                     <i class="fa-solid fa-7"></i>
                 </div>
-                <div class="btnFour">
+                <div onclick="SetValor(4)">
                     <i class="fa-solid fa-4"></i>
                 </div>
-                <div class="btnOne">
+                <div id="btnOne">
                     <i class="fa-solid fa-1"></i>
                 </div>
                 <div class="btnZero">
@@ -44,7 +44,7 @@
                 <div class="btnFive">
                     <i class="fa-solid fa-5"></i>
                 </div>
-                <div class="btnTwo">
+                <div id="btnTwo">
                     <i class="fa-solid fa-2"></i>
                 </div>
                 <div class="btnDot">
@@ -81,7 +81,7 @@
                 <div class="btnSum">
                     <i class="fa-solid fa-plus"></i>
                 </div>
-                <div class="btnEqual">
+                <div id="btnEqual">
                     <i class="fa-solid fa-equals"></i>
                 </div>
             </div>
@@ -90,6 +90,78 @@
 
     <!-- Font awesome script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js" crossorigin="anonymous"></script>
-    
+    <script>
+console.log("sanches1")
+
+    let total = 0;
+    let num1 = 0;
+    let num2 = 0;
+    let OPERACAO = "SOMA";
+
+    function MOSTRALOG(){
+        console.log("--NOVO LOG---")
+        console.log("num1 " + num1)
+        console.log("num2 " + num2)
+        console.log("operacao " + OPERACAO)
+        console.log("total " + total)
+        console.log("PrimeiraVez " + PrimeiraVez)
+        
+    }
+
+    //0 Iniciado
+    //1 numero em memoria
+    let PrimeiraVez = "SIM";
+
+    function SetValor(num){
+        MOSTRALOG();
+        if (PrimeiraVez == "SIM"){
+            num1 = num;  
+            PrimeiraVez = "NAO";
+        }
+        else {
+           num2 = num;
+        }
+        MOSTRALOG();
+    }
+
+    let btn1 = document.getElementById("btnOne");
+    btn1.onclick = function(){
+        MOSTRALOG();
+        if (PrimeiraVez == "SIM"){
+            num1 = 1;  
+            PrimeiraVez = "NAO";
+        }
+        else {
+           num2 = 1;
+        }
+        MOSTRALOG();
+       
+    };
+
+    let btn2 = document.getElementById("btnTwo");
+    btn2.onclick = function(){
+        console.log("btn2");
+        num2 = 2;    
+    };
+
+    let btnEqual = document.getElementById("btnEqual");
+    btnEqual.onclick = function(){
+        MOSTRALOG();
+        console.log("equal");
+
+        if (OPERACAO == "SOMA"){
+          total = num1 + num2;
+        }
+        console.log(total) ;  
+        
+        MOSTRALOG();
+        document.getElementById("result").innerHTML = "Resultado: " + total;
+    };
+
+
+
+
+
+    </script>
 </body>
 </html>
